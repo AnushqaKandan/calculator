@@ -22,4 +22,23 @@ function display(value) {
     else {
         resultField.value += value;
     }
+    
 }
+
+function show(value) {
+    let currentValue = document.getElementById("result").value;
+    if (value === '.' && currentValue.includes('.')) {
+      return;
+    }
+    if (value === '+' && currentValue.includes('+')) {
+        return;
+      }
+      if (value === '/' && currentValue.includes('/')) {
+        return;
+      }
+      if (value === '*' && currentValue.includes('*')) {
+        return;
+      }
+
+    document.getElementById("result").value += value;
+  }
